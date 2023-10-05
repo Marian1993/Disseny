@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+
+#tuberia{
+
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    height: 350px;
+}
+#container {
+
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    height: 550px;
+    text-align: center;
+
+}
+#container>img{
+
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: 150px;
+    left: 30%;
+    animation: sprite 1s steps(8) ;
+
+    <!--z-index: -1;-->
+
+}
+
+
+@keyframes sprite {
+
+    from{
+        transform: translateY(-100%);
+    }
+    from{
+        transform: translateY(-150%);
+    }
+    from{
+        transform: translateY(-200%);
+    }
+    to{
+        transform: translateY(-225%);
+    }
+}
