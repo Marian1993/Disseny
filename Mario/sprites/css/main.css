@@ -1,49 +1,73 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 #tuberia{
 
     position: absolute;
     bottom: 0;
-    width: 300px;
-    height: 350px;
+    width: 200px;
+    height: 200px;
 }
 #container {
 
     position: absolute;
-    bottom: 0;
-    width: 300px;
-    height: 550px;
-    text-align: center;
+    bottom: 200px;
+    width: 70px;
+    height: 80px;
+    margin-left: 70px;
+    overflow: hidden;
+    z-index: -1;
+    animation: pujarTuberia 3s 0s 1 linear;
 
 }
+
 #container>img{
 
-    position: absolute;
-    bottom: 0;
-    width: 100px;
-    height: 150px;
-    left: 30%;
-    animation: sprite 1s steps(8) ;
-
-    <!--z-index: -1;-->
+    margin-left: -210px;
+    margin-top: 0;
+    /* name, duration, timing-function, delay, iteration-count*/
+    animation: corre 1s steps(1) 3s infinite;
 
 }
 
 
-@keyframes sprite {
+@keyframes pujarTuberia{
 
-    from{
-        transform: translateY(-100%);
+    0%{
+        transform: translateY(+50px);
     }
-    from{
-        transform: translateY(-150%);
+    20%{
+        transform: translateY( 0px);
     }
-    from{
-        transform: translateY(-200%);
+    40%{
+        transform: translateY(-50px);
     }
-    to{
-        transform: translateY(-225%);
+    60%{
+        transform: translateY(-100px);
     }
+    80%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY( 0px);
+
+    }
+}
+
+@keyframes corre {
+
+    0%{
+        margin-left: 0px;
+        margin-top: 0;
+    }
+    50%{
+        margin-left: -140px;
+        margin-top: 0;
+
+    }
+
+
 }
