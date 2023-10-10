@@ -1,9 +1,10 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-.background{
+
+.background {
   background: red;
   height: 400px;
   display: flex;
@@ -12,17 +13,17 @@
   gap: 20px;
 }
 
-.inner:nth-child(1){
-background: green;
+.inner:nth-child(1) {
+  background: green;
   order: 2;
 }
-.inner:nth-child(2){
-background: blue;
+
+.inner:nth-child(2) {
+  background: blue;
   order: 1;
-
 }
-.inner:nth-child(3){
-background: yellow;
-  order: 3;
 
+.inner:nth-child(3) {
+  background: yellow;
+  order: 3;
 }
