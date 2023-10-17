@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pixelify+Sans&display=swap');
+
+@font-face {
+    font-family: "Politecnic";
+    src:
+        local("Shadows Into Light"),
+        url("fonts/ShadowIntoLight/ShadowsIntoLight-Regular.ttf") format("truetype");
+}
+* {
+    font-family: 'Pixelify Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.background {
+
+}
+
+.inner:nth-child(1) {
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+.inner:nth-child(2) {
+    font-family: 'Dancing Script', cursive;
+}
+
+.inner:nth-child(3) {
+
+    font-family: "Politecnic",fantasy;
+}
