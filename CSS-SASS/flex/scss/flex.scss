@@ -11,3 +11,43 @@ body>header{
   top:0;
   background: darksalmon;
 }
+#galeria img{
+  width: 450px;
+  height: 675px;
+  object-fit: cover;
+  object-position: center center;
+}
+#galeria{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:20px;
+}
+#galeria article{
+  border: 1px black solid;
+  width: 450px;
+}
+main>section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main>section h2{
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+main>section p{
+  width: 600px;
+}
+main>section:nth-child(2) img{
+  width: 600px;
+}
+
+footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

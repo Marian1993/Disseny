@@ -1,6 +1,6 @@
 const {src,watch, dest} = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
-var link = require('gulp-coffeelint');
+//var link = require('gulp-coffeelint');
 
 
 function compilaFlex() {
@@ -17,7 +17,7 @@ function defaultTask(cb) {
     // place code for your default task here
     cb();
 }
-
+//watch('scss/**/*.scss',{ interval:1000 usePolling:true}, compilaFlex); >ficar dinsuna function
 
 function vigilaSCSS(){
     watch('flex/scss/**/*.scss', compilaFlex);
