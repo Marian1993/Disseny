@@ -1,3 +1,8 @@
+$widthArticle : 450px;
+$rowGap: 10px;
+$columnGap: 30px;
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,13 +11,18 @@
 body>header{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   position: sticky;
   top:0;
   background: darksalmon;
 }
+body main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #galeria img{
-  width: 450px;
+  width: $widthArticle;
   height: 675px;
   object-fit: cover;
   object-position: center center;
@@ -21,12 +31,14 @@ body>header{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  gap:20px;
+  justify-content: flex-start;
+  row-gap:$rowGap;
+  column-gap:$columnGap;
+  width: calc($widthArticle * 4 + $columnGap * 3);
 }
 #galeria article{
   border: 1px black solid;
-  width: 450px;
+  width: $widthArticle;
 }
 main>section{
   display: flex;
