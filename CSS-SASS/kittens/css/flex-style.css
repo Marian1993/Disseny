@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap");
+* {
+  font-family: "Didact Gothic", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: darkgray;
+  padding: 20px 0;
+}
+.header div {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+.header div h1 {
+  font-family: "Ribeye Marrow", cursive;
+  color: steelblue;
+}
+.header .navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header .navigation > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 35px;
+  list-style: none;
+}
+.header .navigation > ul > li {
+  padding: 5px 15px;
+  background: steelblue;
+  border-radius: 20px;
+}
+.header .navigation > ul > li > a {
+  color: white;
+  text-decoration: none;
+}

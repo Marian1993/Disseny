@@ -8,6 +8,12 @@ function compilaFlex() {
         .pipe(sass.sync().on('error', sass.logError))
         .pipe(dest('flex-grid/css'));
 }
+
+function compilaFlexKitten() {
+    return src('kittens/scss/**/*.scss')
+        .pipe(sass.sync().on('error', sass.logError))
+        .pipe(dest('kittens/css'));
+}
 function compilaSCSS() {
     return src('scss/**/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
@@ -22,7 +28,12 @@ function defaultTask(cb) {
 function vigilaSCSS(){
     watch('flex-grid/scss/**/*.scss', compilaFlex);
 }
+
+function vigilaSCSSKitten(){
+    watch('kittens/scss/**/*.scss', compilaFlexKitten);
+}
 exports.compilaEstils = compilaSCSS;
 exports.default = defaultTask;
 exports.compilaflex = compilaFlex;
 exports.vigila = vigilaSCSS;
+exports.moixos = vigilaSCSSKitten;
