@@ -43,6 +43,7 @@ body main{
 main>section{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -54,6 +55,7 @@ main>section h2{
 main>section p{
   width: 600px;
 }
+
 main>section:nth-child(2) img{
   width: 600px;
 }

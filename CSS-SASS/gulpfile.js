@@ -4,9 +4,9 @@ const sass = require('gulp-sass')(require('sass'));
 
 
 function compilaFlex() {
-    return src('flex/scss/**/*.scss')
+    return src('flex-grid/scss/**/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
-        .pipe(dest('flex/css'));
+        .pipe(dest('flex-grid/css'));
 }
 function compilaSCSS() {
     return src('scss/**/*.scss')
@@ -20,7 +20,7 @@ function defaultTask(cb) {
 //watch('scss/**/*.scss',{ interval:1000 usePolling:true}, compilaFlex); >ficar dinsuna function
 
 function vigilaSCSS(){
-    watch('flex/scss/**/*.scss', compilaFlex);
+    watch('flex-grid/scss/**/*.scss', compilaFlex);
 }
 exports.compilaEstils = compilaSCSS;
 exports.default = defaultTask;
