@@ -1,4 +1,4 @@
-const {src,watch, dest} = require('gulp');
+const {src,watch, dest, series, paralel} = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 //var link = require('gulp-coffeelint');
 
@@ -23,6 +23,15 @@ function defaultTask(cb) {
     // place code for your default task here
     cb();
 }
+function compilaColors() {
+    return src('colors/*.scss')
+        .pipe(sass.sync().on('error', sass.logError))
+        .pipe(dest('colors/css'));
+}
+
+function vigilaColors(){
+    watch('colors/*.scss', compilaColors);
+}
 //watch('scss/**/*.scss',{ interval:1000 usePolling:true}, compilaFlex); >ficar dinsuna function
 
 function vigilaSCSS(){
@@ -37,3 +46,4 @@ exports.default = defaultTask;
 exports.compilaflex = compilaFlex;
 exports.vigila = vigilaSCSS;
 exports.moixos = vigilaSCSSKitten;
+exports.colors = vigilaColors;

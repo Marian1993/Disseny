@@ -16,6 +16,9 @@ body>header{
   top:0;
   background: darksalmon;
 }
+body > header > h1::before{
+  content: "X";
+}
 body main{
   display: flex;
   flex-direction: column;
@@ -65,3 +68,13 @@ footer{
   flex-direction: row;
   justify-content: space-between;
 }
+
+@media screen and (min-width: 900px){
+  body > header{
+    background: red;
+  }
+}
+body > header > button{
+  display: none;
+}
+

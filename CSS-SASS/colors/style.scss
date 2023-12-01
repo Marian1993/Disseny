@@ -1,0 +1,10 @@
+
+@for $r from 0 through 10 {
+  .color-#{$r*10}{
+    color: $r*10;
+  }
+  .colorbg-#{$r*10}{
+    color: $r*10;
+  }
+
+}
